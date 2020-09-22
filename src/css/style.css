@@ -6,4 +6,25 @@
   body {
       background: aqua;
       text-align: center;
-    }
+  }
+  
+  .table {
+    width: 400px;
+    border: 1px black solid;
+  }
+
+  td {
+    border: 1px black solid;
+  }
+
+  .headers {
+    width: 100px;
+    margin: 0;
+    font-weight: bold;
+  }
+
+  .table-body {
+    border: 1px black solid;
+    width: 400px;
+    height: 500 px;
+  }

@@ -12,6 +12,10 @@
         "sourceType": "module"
     },
     "rules": {
-        "import/extensions":["error","ignorePackages"]
+        "import/extensions":["error","ignorePackages"],
+        "array-callback-return": 0,
+        "no-unused-expressions": 0,
+        "no-param-reassign": 0
+
     }
 }
