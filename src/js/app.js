@@ -6,8 +6,8 @@ const tableBody = document.querySelector('.table-body');
 const idUp = [...data.sort((a, b) => a.id - b.id)];
 const idDown = [...data.sort((a, b) => b.id - a.id)];
 
-const titleUp = [...data.sort((a, b) => ('' + a.title).localeCompare(b.title))];
-const titleDown = [...data.sort((a, b) => ('' + b.title).localeCompare(a.title))];
+const titleUp = [...data.sort((a, b) => (`${a.title}`).localeCompare(b.title))];
+const titleDown = [...data.sort((a, b) => (`${b.title}`).localeCompare(a.title))];
 
 const yearUp = [...data.sort((a, b) => a.year - b.year)];
 const yearDown = [...data.sort((a, b) => b.year - a.year)];
