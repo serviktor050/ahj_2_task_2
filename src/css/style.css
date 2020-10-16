@@ -28,3 +28,11 @@
     width: 400px;
     height: 500 px;
   }
+
+  .sort-up::after {
+    content: '\2191';
+  }
+
+  .sort-down::after {
+    content: '\2193';
+  }

@@ -3,37 +3,17 @@ import data from './data.js';
 const tableHeaders = document.querySelectorAll('.headers');
 const tableBody = document.querySelector('.table-body');
 
-const idUp = [...data.sort((a, b) => {
-  a.id > b.id ? 1 : -1;
-}).reverse()];
+const idUp = [...data.sort((a, b) => a.id - b.id)];
+const idDown = [...data.sort((a, b) => b.id - a.id)];
 
-const idDown = [...data.sort((a, b) => {
-  a.id > b.id ? 1 : -1;
-})];
+const titleUp = [...data.sort((a, b) => ('' + a.title).localeCompare(b.title))];
+const titleDown = [...data.sort((a, b) => ('' + b.title).localeCompare(a.title))];
 
-const titleUp = [...data.sort((a, b) => {
-  a.title > b.title ? 1 : -1;
-}).reverse()];
+const yearUp = [...data.sort((a, b) => a.year - b.year)];
+const yearDown = [...data.sort((a, b) => b.year - a.year)];
 
-const titleDown = [...data.sort((a, b) => {
-  a.title > b.title ? 1 : -1;
-})];
-
-const yearUp = [...data.sort((a, b) => {
-  a.year > b.year ? 1 : -1;
-}).reverse()];
-
-const yearDown = [...data.sort((a, b) => {
-  a.year > b.year ? 1 : -1;
-})];
-
-const imdbUp = [...data.sort((a, b) => {
-  a.imdb > b.imdb ? 1 : -1;
-}).reverse()];
-
-const imdbDown = [...data.sort((a, b) => {
-  a.imdb > b.imdb ? 1 : -1;
-})];
+const imdbUp = [...data.sort((a, b) => a.imdb - b.imdb)];
+const imdbDown = [...data.sort((a, b) => b.imdb - a.imdb)];
 
 const drawTableBody = function (array) {
   tableBody.innerHTML = '';
